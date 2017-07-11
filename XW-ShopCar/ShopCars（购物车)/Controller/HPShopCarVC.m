@@ -705,7 +705,7 @@ static NSString *HPShopCarHeaderViewID = @"HPShopCarHeaderViewID";
         self.Actualprice =[[decimalNumber4 decimalNumberByAdding:decimalNumber2] stringValue];
         
         
-        if ([ShopCarModel.full_price doubleValue]<[ShopCarModel.currentSelectprice doubleValue]) {
+        if ([ShopCarModel.full_price doubleValue]<[ShopCarModel.currentSelectprice doubleValue]&&[ShopCarModel.full_price doubleValue]>0) {
             // 计算实际应付的金额，（符合满减条件去掉满减的金额）
             NSDecimalNumber *decimalNumber5 = [NSDecimalNumber decimalNumberWithString:self.Actualprice];
             self.Actualprice =[[decimalNumber5 decimalNumberBySubtracting:decimalNumber3] stringValue];
@@ -792,7 +792,7 @@ static NSString *HPShopCarHeaderViewID = @"HPShopCarHeaderViewID";
         self.totalprice =  [[decimalNumber1 decimalNumberByAdding:decimalNumber2] stringValue];
         
         self.Actualprice =[[decimalNumber4 decimalNumberByAdding:decimalNumber2] stringValue];
-        if ([ShopCarModel.full_price doubleValue]<[ShopCarModel.currentSelectprice doubleValue]) {
+        if ([ShopCarModel.full_price doubleValue]<[ShopCarModel.currentSelectprice doubleValue]&&[ShopCarModel.full_price doubleValue]>0) {
             // 计算实际应付的金额，（符合满减条件去掉满减的金额）
             NSDecimalNumber *decimalNumber5 = [NSDecimalNumber decimalNumberWithString:self.Actualprice];
             self.Actualprice =[[decimalNumber5 decimalNumberBySubtracting:decimalNumber3] stringValue];

@@ -50,7 +50,7 @@
         
         self.fullcutPromptbl.text = [NSString stringWithFormat:@"满%@减%@",_Model.full_price,_Model.cut_price];
         
-        if ([_Model.currentSelectprice doubleValue]>[_Model.full_price doubleValue]) {
+        if ([_Model.currentSelectprice doubleValue]>=[_Model.full_price doubleValue]) {
             self.fullcutResultbl.text = [NSString stringWithFormat:@"已减%@元",_Model.cut_price];
             
         }else
